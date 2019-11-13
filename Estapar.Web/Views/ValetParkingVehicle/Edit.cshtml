@@ -1,0 +1,47 @@
+﻿@model Estapar.Web.Models.ValetParkingVehicleViewModel
+
+@{
+}
+
+@using (Html.BeginForm("Create", "ValetParkingVehicle", System.Web.Mvc.FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <section class="content">
+        <div class="box box-default">
+            <div class="box-header with-border">
+                <h3 class="box-title">Cadastro de Manobrista e Veículos</h3>
+
+                <div class="box-tools pull-right">
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                </div>
+            </div>
+            <div class="box-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label>@Html.LabelFor(model => model.ValetParkingId)</label>
+                            @Html.DropDownListFor(model => model.ValetParkingId, (SelectList)ViewBag.ValetParkingList, new { @class = "form-control select2" })
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label>@Html.LabelFor(model => model.VehicleId)</label>
+                            @Html.DropDownListFor(model => model.VehicleId, (SelectList)ViewBag.VehiclelList, new { @class = "form-control select2" })
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="box-footer">
+                <input type="submit" class="btn btn-primary" value="Salvar" />
+                @Html.ActionLink("Voltar", "Index", null, new { @class = "btn btn-warning pull-right" })
+            </div>
+        </div>
+    </section>
+
+}
+
+

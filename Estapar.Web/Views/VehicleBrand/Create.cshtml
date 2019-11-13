@@ -1,0 +1,44 @@
+﻿@model Estapar.Web.Models.VehicleBrandViewModel
+
+@{
+}
+
+
+@using (Html.BeginForm("Create", "VehicleBrand", System.Web.Mvc.FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+<section class="content">
+    <div class="box box-default">
+        <div class="box-header with-border">
+            <h3 class="box-title">Cadastro de Marcas</h3>
+
+            <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+            </div>
+        </div>
+        <div class="box-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>@Html.LabelFor(model => model.Name)</label>
+                        @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label> @Html.LabelFor(model => model.Active)</label><br />
+                        @Html.CheckBoxFor(m => m.Active, new { htmlAttributes = new { @class = "form-control iCheck-helper" } } )
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box-footer">
+            <input type="submit" class="btn btn-primary" value="Salvar" />
+            @Html.ActionLink("Voltar", "Index", null, new { @class = "btn btn-warning pull-right" })
+        </div>
+    </div>
+</section>
+
+}
+

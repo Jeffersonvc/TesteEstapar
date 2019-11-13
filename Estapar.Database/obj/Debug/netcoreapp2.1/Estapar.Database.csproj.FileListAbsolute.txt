@@ -1,0 +1,9 @@
+C:\Users\jeff\source\repos\Estapar\Estapar.Database\bin\Debug\netcoreapp2.1\Estapar.Database.deps.json
+C:\Users\jeff\source\repos\Estapar\Estapar.Database\bin\Debug\netcoreapp2.1\Estapar.Database.dll
+C:\Users\jeff\source\repos\Estapar\Estapar.Database\bin\Debug\netcoreapp2.1\Estapar.Database.pdb
+C:\Users\jeff\source\repos\Estapar\Estapar.Database\obj\Debug\netcoreapp2.1\Estapar.Database.csproj.CoreCompileInputs.cache
+C:\Users\jeff\source\repos\Estapar\Estapar.Database\obj\Debug\netcoreapp2.1\Estapar.Database.AssemblyInfoInputs.cache
+C:\Users\jeff\source\repos\Estapar\Estapar.Database\obj\Debug\netcoreapp2.1\Estapar.Database.AssemblyInfo.cs
+C:\Users\jeff\source\repos\Estapar\Estapar.Database\obj\Debug\netcoreapp2.1\Estapar.Database.dll
+C:\Users\jeff\source\repos\Estapar\Estapar.Database\obj\Debug\netcoreapp2.1\Estapar.Database.pdb
+C:\Users\jeff\source\repos\Estapar\Estapar.Database\obj\Debug\netcoreapp2.1\Estapar.Database.csprojAssemblyReference.cache

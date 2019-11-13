@@ -1,0 +1,8 @@
+C:\Users\jeff\source\repos\Estapar\Estapar.Core\bin\Debug\netcoreapp2.1\Estapar.Core.deps.json
+C:\Users\jeff\source\repos\Estapar\Estapar.Core\bin\Debug\netcoreapp2.1\Estapar.Core.dll
+C:\Users\jeff\source\repos\Estapar\Estapar.Core\obj\Debug\netcoreapp2.1\Estapar.Core.csproj.CoreCompileInputs.cache
+C:\Users\jeff\source\repos\Estapar\Estapar.Core\obj\Debug\netcoreapp2.1\Estapar.Core.AssemblyInfoInputs.cache
+C:\Users\jeff\source\repos\Estapar\Estapar.Core\obj\Debug\netcoreapp2.1\Estapar.Core.AssemblyInfo.cs
+C:\Users\jeff\source\repos\Estapar\Estapar.Core\bin\Debug\netcoreapp2.1\Estapar.Core.pdb
+C:\Users\jeff\source\repos\Estapar\Estapar.Core\obj\Debug\netcoreapp2.1\Estapar.Core.dll
+C:\Users\jeff\source\repos\Estapar\Estapar.Core\obj\Debug\netcoreapp2.1\Estapar.Core.pdb

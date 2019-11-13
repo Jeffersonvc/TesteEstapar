@@ -1,0 +1,56 @@
+﻿@model Estapar.Web.Models.VehicleViewModel
+
+@{
+}
+
+@using (Html.BeginForm("Create", "Vehicle", System.Web.Mvc.FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <section class="content">
+        <div class="box box-default">
+            <div class="box-header with-border">
+                <h3 class="box-title">Cadastro de Veículos</h3>
+
+                <div class="box-tools pull-right">
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                </div>
+            </div>
+            <div class="box-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label>@Html.LabelFor(model => model.VehicleModelId)</label>
+                            @Html.DropDownListFor(model => model.VehicleModelId, (SelectList)ViewBag.ModelList, new { @class = "form-control select2" })
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>@Html.LabelFor(model => model.VehicleYear)</label>
+                            @Html.TextBoxFor(model => model.VehicleYear, new { @class = "form-control" })
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>@Html.LabelFor(model => model.VehicleLicensePlate)</label>
+                            @Html.TextBoxFor(model => model.VehicleLicensePlate, new { @class = "form-control" })
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label> @Html.LabelFor(model => model.Active)</label><br />
+                            @Html.CheckBoxFor(model => model.Active, new { htmlAttributes = new { @class = "form-control iCheck-helper" } })
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box-footer">
+                <input type="submit" class="btn btn-primary" value="Salvar" />
+                @Html.ActionLink("Voltar", "Index", null, new { @class = "btn btn-warning pull-right" })
+            </div>
+        </div>
+    </section>
+
+}

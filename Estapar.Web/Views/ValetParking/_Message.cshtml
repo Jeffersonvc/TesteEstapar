@@ -1,0 +1,51 @@
+﻿@model Estapar.Web.Models.ValetParkingViewModel
+<div class="modal-body">
+    <div class="alert alert-warning">
+        <span class="glyphicon glyphicon-warning-sign"></span>
+        Confirma a exclusão do manobrista?
+        <br />
+        <br />
+        <strong>Código: </strong>
+        <h4>
+            @Model.Id
+        </h4>
+        <br />
+        <strong>Nome: </strong>
+        <h4>
+            @Model.Name
+        </h4>
+        <br />
+        <strong>CPF: </strong>
+        <h4>
+            @Model.Document
+        </h4>
+        <br />
+    </div>
+
+    @using (Html.BeginForm("Delete", "ValetParking", new { id = Model.Id }, FormMethod.Post, null))
+    {
+        <div class="row">
+            &nbsp;
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <button type="button" id="cancel-btn" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                <button type="submit" id="approve-btn" class="btn btn-danger">Confirmar</button>
+            </div>
+        </div>
+    }
+</div>
+
+
+<script type="text/javascript">
+    $(function () {
+        $('#approve-btn').click(function () {
+            $('#modal-container').modal('hide');
+            $('#cancel-btn').click();
+        });
+    });
+</script>
+
+
+
+

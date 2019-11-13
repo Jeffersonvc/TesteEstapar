@@ -1,0 +1,29 @@
+﻿<aside class="main-sidebar">
+    <section class="sidebar">
+       
+        @* BEGIN Menu *@
+        <ul class="sidebar-menu" data-widget="tree">
+            <li class="header">MENU</li>
+
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-link"></i> <span>Veículos</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="@Url.Action("Index", "VehicleBrand")">Marcas</a></li>
+                    <li><a href="@Url.Action("Index", "VehicleModel")">Modelos</a></li>
+                    <li><a href="@Url.Action("Index", "Vehicle")">Veículos</a></li>
+                    <li><a href="@Url.Action("Index", "ValetParking")">Manobrista</a></li>
+                    <li><a href="@Url.Action("Index", "ValetParkingVehicle")">Manobrista <> Veículo</a></li>
+                </ul>
+            </li>
+        </ul>
+        @* END Menu *@
+    </section>
+</aside>
+
+
+

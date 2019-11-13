@@ -1,0 +1,61 @@
+﻿@model List<Estapar.Web.Models.ValetParkingVehicleDetailViewModel>
+@{
+    ViewBag.Title = "Vínculo de manobrista ao veículo";
+}
+
+<div class="box">
+    <div class="box-header">
+        <h3 class="box-title">Registros de veículos</h3>
+        @Html.ActionLink("+ Novo", "Create", null, new { @class = "btn btn-primary pull-right" })
+
+    </div>
+    <!-- /.box-header -->
+    <div class="box-body">
+        <table id="example1" class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Manobrista</th>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                    <th>Placa</th>
+                    <th>Data de Inclusão</th>
+                    <th>Ativo</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model == null || Model.Count == 0)
+                {
+                    <tr>
+                        <td colspan="8">Nenhuma informação encontrada.</td>
+                    </tr>
+                }
+                else
+                {
+                    foreach (var item in Model)
+                    {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.ValetParkingName</td>
+                        <td>@item.VahicleBrandName</td>
+                        <td>@item.VahicleModelName</td>
+                        <td>@item.VehicleLicensePlate</td>
+                        <td>@item.InclusionDate.ToString("dd/MM/yyyy HH:mm")</td>
+                        <td>@(item.Active ? "Sim" : "Não")</td>
+                        <td>
+                            @Html.ActionLink("Excluir ", "ConfirmDelete", "ValetParkingVehicle", new { id = item.Id }, new { @class = "modal-link btn btn-danger" })
+                            @Html.ActionLink("Editar ", "Edit", "ValetParkingVehicle", new { id = item.Id }, new { @class = "btn btn-success" })
+                        </td>
+                    </tr>
+                    }
+                }
+
+            </tbody>
+            <tfoot>
+            </tfoot>
+        </table>
+    </div>
+    <!-- /.box-body -->
+</div>
+<!-- /.box -->
